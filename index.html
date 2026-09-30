@@ -54,40 +54,48 @@
     font-size:0.75rem; letter-spacing:0.03em; z-index:2;
   }
 
-  .form-col{ padding:40px 44px 48px; display:flex; flex-direction:column; }
+  .form-col{ width:439px; height:548px; padding:24px 32px 26px; display:flex; flex-direction:column; overflow:hidden; margin:40px auto; justify-self:center; align-self:center; border-radius:7px; }
 
-  .logo-wrap{ text-align:center; margin-bottom:8px; }
-  .logo-wrap img{ width:110px; height:auto; margin:0 auto; display:block; }
+  .logo-wrap{ text-align:center; margin-bottom:6px; }
+  .logo-wrap img{ width:72px; height:auto; margin:0 auto; display:block; }
 
-  .make-payment-label{ text-align:center; color:var(--bowen-blue); font-size:0.98rem; margin:14px 0 22px; }
+  .make-payment-label{ text-align:center; color:var(--bowen-blue); font-size:0.92rem; margin:8px 0 14px; }
 
   .quick-guide{
-    background:var(--panel); border:1px solid var(--border); border-radius:6px;
-    padding:14px 18px; display:flex; align-items:center; justify-content:space-between;
-    cursor:pointer; margin-bottom:26px; color:#374151; font-size:0.95rem;
+    background:transparent; border:1px solid #D4D4DE; border-radius:50px;
+    padding:9px 16px; display:flex; align-items:center; justify-content:space-between;
+    cursor:pointer; margin-bottom:16px; color:#D4D4DE; font-size:0.9rem;
   }
-  .quick-guide .plus{ font-size:1.2rem; color:#9CA3AF; transition:transform 0.2s ease; }
+  .quick-guide .plus{ font-size:1.1rem; color:#D4D4DE; transition:transform 0.2s ease; }
   .quick-guide.open .plus{ transform:rotate(45deg); }
-  .quick-guide-body{ max-height:0; overflow:hidden; transition:max-height 0.3s ease; font-size:0.88rem; color:var(--muted); line-height:1.6; }
-  .quick-guide-body p{ padding:14px 4px 4px; margin:0; }
+  .quick-guide-body{ max-height:0; overflow:hidden; transition:max-height 0.3s ease; font-size:0.82rem; color:var(--muted); line-height:1.5; }
+  .quick-guide-body p{ padding:10px 4px 4px; margin:0; }
 
-  .field{ margin-bottom:20px; }
-  .field label{ display:block; font-size:0.92rem; font-weight:600; color:var(--ink); margin-bottom:8px; }
+  .field{ margin-bottom:10px; }
+  .field label{ display:block; font-size:0.85rem; font-weight:600; color:#D4D4DE; margin-bottom:5px; }
   .field input{
-    width:100%; padding:12px 14px; border:1px solid var(--border); border-radius:6px;
-    font-size:0.98rem; transition:border-color 0.2s ease, box-shadow 0.2s ease;
+    width:100%; padding:10px 14px; background:transparent; border:1px solid #D4D4DE; border-radius:50px;
+    font-size:0.92rem; transition:border-color 0.2s ease, box-shadow 0.2s ease;
   }
   .field input:focus{ outline:none; border-color:var(--bowen-blue); box-shadow:0 0 0 3px rgba(20,133,200,0.14); }
 
   .pay-btn{
-    width:100%; padding:15px; border:none; border-radius:6px;
-    background:#5B6BCC; color:#fff; font-size:1rem; font-weight:600;
-    text-transform:lowercase; cursor:pointer; margin-top:8px; transition:background 0.2s ease;
+    width:100%; padding:12px; border:none; border-radius:50px;
+    background:#5B6BCC; color:#fff; font-size:0.95rem; font-weight:600;
+    text-transform:lowercase; cursor:pointer; margin-top:6px; transition:background 0.2s ease;
   }
   .pay-btn:hover{ background:#4B5AB8; }
   .pay-btn:disabled{ opacity:0.6; cursor:not-allowed; }
 
-  .footnote{ margin-top:22px; text-align:center; font-size:0.78rem; color:var(--muted); }
+  .footnote{
+    margin:14px -32px -26px -32px;
+    padding:11px 20px;
+    background:#615F6A;
+    color:rgba(255,255,255,0.9);
+    text-align:center;
+    border-radius:0 0 7px 7px;
+    font-size:0.7rem;
+  }
 
   #resultBox{ display:none; text-align:center; }
   .result-icon{
@@ -109,7 +117,8 @@
     .form-col{
       position:relative;
       z-index:1;
-      max-width:290px;
+      width:210px;
+      height:318px;
       margin:56px auto;
       padding:17px 17px 19px;
       background:rgba(255,255,255,0.78);
@@ -117,7 +126,7 @@
       -webkit-backdrop-filter:blur(6px);
       border-radius:7px;
       box-shadow:0 12px 40px rgba(0,0,0,0.25);
-      overflow:hidden;
+      overflow-y:auto;
     }
     .logo-wrap img{ width:54px; }
     .make-payment-label{ margin:7px 0 10px; }
@@ -127,9 +136,10 @@
       background:transparent;
       border:1px solid #D4D4DE;
       border-radius:50px;
+      color:#D4D4DE;
     }
     .field{ margin-bottom:8px; }
-    .field label{ margin-bottom:4px; font-size:0.82rem; }
+    .field label{ margin-bottom:4px; font-size:0.82rem; color:#D4D4DE; }
     .field input{
       padding:9px 14px;
       background:transparent;
